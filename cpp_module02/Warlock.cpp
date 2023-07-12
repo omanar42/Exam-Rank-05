@@ -6,7 +6,7 @@
 /*   By: omanar <omanar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 12:39:38 by omanar            #+#    #+#             */
-/*   Updated: 2023/06/18 13:23:01 by omanar           ###   ########.fr       */
+/*   Updated: 2023/07/12 14:16:02 by omanar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ void Warlock::launchSpell(std::string spellName, ATarget const &target) {
 	ASpell *spell = _spellbook.createSpell(spellName);
 	if (spell)
 		spell->launch(target);
+	delete spell;
 }
