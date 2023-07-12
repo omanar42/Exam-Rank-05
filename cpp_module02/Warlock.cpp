@@ -6,7 +6,7 @@
 /*   By: omanar <omanar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 12:39:38 by omanar            #+#    #+#             */
-/*   Updated: 2023/07/12 14:16:02 by omanar           ###   ########.fr       */
+/*   Updated: 2023/07/12 14:20:50 by omanar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ void Warlock::introduce() const {
 }
 
 void Warlock::learnSpell(ASpell *spell) {
-	if (spell)
-		_spellbook.learnSpell(spell);
+	_spellbook.learnSpell(spell);
 }
 
 void Warlock::forgetSpell(std::string spellName) {

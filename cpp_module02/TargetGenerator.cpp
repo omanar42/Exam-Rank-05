@@ -6,7 +6,7 @@
 /*   By: omanar <omanar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 13:25:30 by omanar            #+#    #+#             */
-/*   Updated: 2023/06/19 13:21:43 by omanar           ###   ########.fr       */
+/*   Updated: 2023/07/12 14:21:26 by omanar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ void TargetGenerator::learnTargetType(ATarget *target) {
 }
 
 void TargetGenerator::forgetTargetType(std::string const &targetType) {
-	if (_targets.find(targetType) != _targets.end())
-		_targets.erase(targetType);
+	std::map<std::string, ATarget *>::iterator it = _targets.find(targetType);
+	if (it != _targets.end())
+		_targets.erase(it);
 }
 
 ATarget *TargetGenerator::createTarget(std::string const &targetType) {
